@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
-import 'basic_widget.dart';
+import 'screens/login_screen.dart';
 
 void main() {
-  runApp(const PraktikumMola2App());
+  runApp(const JustduitApp());
 }
 
-class PraktikumMola2App extends StatelessWidget {
-  const PraktikumMola2App({super.key});
+class JustduitApp extends StatelessWidget {
+  const JustduitApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Praktikum Mola 3',
+      title: 'Justduit',
       debugShowCheckedModeBanner: false,
-      home: const BasicWidget(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: const LoginScreen(),
     );
   }
 }

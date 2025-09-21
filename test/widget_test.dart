@@ -6,16 +6,15 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:myapp/main.dart';
+import 'package:praktikum_mola2/main.dart';
 
 void main() {
   testWidgets('App loads correctly', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const PraktikumMola2App());
+    await tester.pumpWidget(const JustduitApp());
 
     // Verify that our app loads with correct title
-    expect(find.text('Aplikasi Menabung'), findsOneWidget);
-    expect(find.text('AYO Mulai Menabung!'), findsOneWidget);
+    expect(find.text('Justduit'), findsOneWidget);
+    expect(find.text('Hi, Welcome Back to Justduit'), findsOneWidget);
   });
 }
