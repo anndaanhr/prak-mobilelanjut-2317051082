@@ -148,7 +148,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Handle sign in
+                    // Validation
+                    if (_emailController.text.isEmpty || _passwordController.text.isEmpty) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('Email dan Password harus diisi!'),
+                          backgroundColor: Colors.red,
+                        ),
+                      );
+                    } else {
+                      // Navigate to Dashboard
+                      Navigator.pushNamed(context, '/dashboard');
+                    }
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF2196F3),
