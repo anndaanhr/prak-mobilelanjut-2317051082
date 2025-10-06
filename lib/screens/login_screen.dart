@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'signup_screen.dart';
+import 'splash_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -157,8 +158,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       );
                     } else {
-                      // Navigate to Dashboard
-                      Navigator.pushNamed(context, '/dashboard');
+                      // Navigate to Splash Screen
+                      Navigator.pushNamed(context, SplashScreen.route);
                     }
                   },
                   style: ElevatedButton.styleFrom(
